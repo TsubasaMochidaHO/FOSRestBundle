@@ -124,7 +124,7 @@ class RequestBodyParamConverter implements ParamConverterInterface
      */
     public function supports(ParamConverter $configuration)
     {
-        return null !== $configuration->getClass();
+        return null !== $configuration->getClass() && null !== $configuration->getConverter();
     }
 
     /**
